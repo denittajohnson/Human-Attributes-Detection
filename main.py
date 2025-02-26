@@ -4,7 +4,7 @@ import os
 import PIL.Image
 
 #set api
-os.environ['GOOGLE_API_KEY'] = "AIzaSyBqa0eIyiugP6gnAG5UvBq9ZnrLtvub5pA"
+os.environ['GOOGLE_API_KEY'] = "Your API Key"
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 #load model
