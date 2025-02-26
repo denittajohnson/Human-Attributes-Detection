@@ -3,14 +3,9 @@ import google.generativeai as genai
 import os
 import PIL.Image
 
-#set api
 os.environ['GOOGLE_API_KEY'] = "Your API Key"
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
-
-#load model
 model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
-
-#custom function
 def analyze_human_attributes(image):
     prompt = """ 
     You are an AI trained to analyze human attributes from Images.So carefully analyze the given images and returned the following details:
@@ -30,20 +25,15 @@ def analyze_human_attributes(image):
     
     return result.text.strip()
 
-#app creation
 st.title("Human Attribute Recognition")
 st.write("Upload an image to recognize")
-
-#Image upload
 uploaded_image = st.file_uploader("Upload an Image", type=['png','jpg','jpeg'])
-
 if uploaded_image:
     img = PIL.Image.open(uploaded_image)
     info = analyze_human_attributes(img)
     
-    #st.write(person_info)
     
-    col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
     
     with col1:
         st.image(img, caption='Uploaded Image', use_container_width=True)
