@@ -1,2 +1,2 @@
 # Human-Attributes-Detection
-This project detects human attributes from images that we uploaded.It uses various libraries such as os-for file handling and directory management,pillow-for image processing,streamlit-for building an interactive UI,google generative ai - for advanced attribute analysis.
+This project detects human attributes such as Gender,Age Estimation,Mood,Facial Expression,Glasses,Beard,Hair colour,Eye colour,Head wear,Emotions detected,Confidence level from images that we uploaded.It uses various libraries such as **os**-for file handling and directory management,**pillow**-for image processing,**streamlit**-for building an interactive UI,**google generative AI**- for advanced attribute analysis.
